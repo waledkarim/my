@@ -40,30 +40,43 @@ function ImageSlider({page = 1, limit = 5}){
     }, [])
 
 
+
+
     if(loading){
         return <div>Loading Data!! Please Wait</div>
     }
-
     if(errorMsg){
         return <div>Error occured!! {errorMsg}</div>
     }
 
+
+
     return(
         <div className="container">
+
+
             <BsArrowLeftCircleFill onClick={handlePrevious} className="arrow arrow-left"/>
+
+
+
             {
                 images && images.length > 0 ? 
-                images.map((img,ind) => 
+                images.map((img, ind) => 
                     <img 
-                    key={img.id}
-                    src={img.download_url} 
-                    alt={img.download_url} 
-                    className={currentSlide === ind ? "current-image" : "current-image hide-current-image"} />
+                        key={img.id}
+                        src={img.download_url} 
+                        alt={img.download_url} 
+                        className={currentSlide === ind ? "current-image" : "current-image hide-current-image"} 
+                    />
                 )
                 :
                 null
             }
+
+
             <BsArrowRightCircleFill onClick={handleNext} className="arrow arrow-right"/>
+
+
             <span className="circle-indicators">
                 {
                     images && images.length > 0 ? 
@@ -73,13 +86,16 @@ function ImageSlider({page = 1, limit = 5}){
                          onClick={() => setCurrentSlide(index)}
                          key={index}
                          className={currentSlide === index ? "current-indicator" : "current-indicator inactive-indicator"}
-                        > </button>
+                        /> 
                     
                     )
                     : 
                     null
                 }
             </span>
+
+
+
         </div>
     );
 
