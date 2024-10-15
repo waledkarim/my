@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
-function ImageSlider({url, limit}){
+function ImageSlider({url, page, limit}){
 
     const [images, setImages] = useState([]);
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -9,10 +9,21 @@ function ImageSlider({url, limit}){
     const [loading, setLoading] = useState(false);
 
     async function fetchImages(){
-        setLoading(true);
-
-        const response = await fetch();
+        try{
+            setLoading(true);
+            const response = await fetch(`${url}?page=${page}&limit=${limit}`);
+            console.log(response);
+        }
     }
+
+    useEffect(() => {
+        console.log("Use Effect running");
+        if(url !== "") fetchImages();
+    }, [url])
+
+    return(
+        <div className="container"></div>
+    );
 
 
 }
