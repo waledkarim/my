@@ -1,4 +1,10 @@
-
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
 
 .container {
     position: relative;
@@ -39,7 +45,7 @@
 }
 
 .current-indicator {
-    background-color: #fff;
+    background-color: #ffffff;
     height: 15px;
     width: 15px;
     border-radius: 50%;
@@ -47,6 +53,6 @@
     margin: 0 0.2rem;
     cursor: pointer;
 }
-.hide-current-indicator {
-    display: none;
+.inactive-indicator {
+    background-color: rgb(60, 58, 58);
 }

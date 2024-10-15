@@ -27,11 +27,11 @@ function ImageSlider({url, page, limit}){
     }
 
     function handleNext(){
-        setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
+        setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
     }
 
     function handlePrevious(){
-        setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
+        setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
     }
 
     useEffect(() => {
@@ -72,7 +72,7 @@ function ImageSlider({url, page, limit}){
                         <button
                          onClick={() => setCurrentSlide(index)}
                          key={index}
-                         className={currentSlide === index ? "current-indicator" : "current-indicator hide-current-indicator"}
+                         className={currentSlide === index ? "current-indicator" : "current-indicator inactive-indicator"}
                         > </button>
                     
                     )
