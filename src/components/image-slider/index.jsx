@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import './styles.css'
 
-function ImageSlider({url, page, limit}){
+function ImageSlider({page = 1, limit = 5}){
 
     const [images, setImages] = useState([]);
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -13,7 +13,7 @@ function ImageSlider({url, page, limit}){
         try{
             setLoading(true);
 
-            const response = await fetch(`${url}?page=${page}&limit=${limit}`);
+            const response = await fetch(`https://picsum.photos/v2/list?page=${page}&limit=${limit}`);
             const data = await response.json();
 
             if(data){
@@ -36,8 +36,8 @@ function ImageSlider({url, page, limit}){
 
     useEffect(() => {
         console.log("Use Effect running");
-        if(url !== "") fetchImages();
-    }, [url])
+        fetchImages();
+    }, [])
 
 
     if(loading){
