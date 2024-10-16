@@ -1,11 +1,4 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-}
-
+/* 
 .container {
     position: relative;
     display: flex;
@@ -55,4 +48,4 @@ body {
 }
 .inactive-indicator {
     background-color: rgb(60, 58, 58);
-}
+} */
