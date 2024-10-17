@@ -24,8 +24,8 @@ function MenuItem({item}){
     console.log(displayCurrentChildren);
 
     return(
-        <li>
-            <div style={
+        <li >
+            <div className="menu-item" style={
                 {
                     display: "flex",
                     gap: "20px"
