@@ -1,5 +1,5 @@
 
-export const menus = [
+ const menus = [
     {
       label: "Home",
       to: "/",
