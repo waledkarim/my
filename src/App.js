@@ -1,8 +1,10 @@
 import './App.css';
 import Accordion from './components/accordion';
 import ImageSlider from './components/image-slider';
+import LightDarkMode from './components/light-dark-mode';
 import LoadMoreData from './components/load-more-data';
 import RandomColor from './components/random-color';
+import ScrollIndicator from './components/scroll-indicator';
 import StarRating from './components/star-rating';
 import TreeView from './components/tree-view';
 import menus from './components/tree-view/data';
@@ -20,7 +22,11 @@ function App() {
 
       {/* <LoadMoreData /> */}
 
-      <TreeView menu={menus} />
+      {/* <TreeView menu={menus} /> */}
+
+      {/* <LightDarkMode /> */}
+
+      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>
 
 
     </div>
