@@ -1,4 +1,6 @@
 import Accordion from './components/accordion';
+import ParentOfModal from './components/custom-modal/parent-component';
+import Modal from './components/custom-modal/modal';
 import TabTest from './components/custom-tabs/tab-test';
 import ImageSlider from './components/image-slider';
 import LightDarkMode from './components/light-dark-mode';
@@ -28,7 +30,9 @@ function App() {
 
       {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/> */}
 
-      <TabTest />
+      {/* <TabTest /> */}
+
+      <ParentOfModal />
 
 
     </div>
